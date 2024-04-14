@@ -10,7 +10,26 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <div class="container">
+    <header>
+      <h1>Developer Portfolio App</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Work', work_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    </nav>
+
     <%= yield %>
-  </body>
+
+    <footer>
+      <p><%= mail_to 'nkythwal@memphis.edu', nil, class: 'contact-link' %> <%= link_to 'Instagram', 'https://www.instagram.com/_.naitikk._', class: 'contact-link' %> <%= link_to 'Github', 'https://github.com/NaitikKaythwal/', class: 'contact-link' %></p>
+
+    </footer>
+  </div>
+</body>
 </html>
